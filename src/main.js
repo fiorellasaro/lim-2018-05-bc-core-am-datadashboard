@@ -82,6 +82,7 @@ getCohorts = () => {
     for (const cohort of cohorts ){
     if (document.getElementById('sede').value === 'LIM') {
         if(cohort.id.includes('lim-')){
+
           listOptions(cohort.id);
         }
     }
@@ -138,6 +139,8 @@ getUsers = (cohort) => {
 };
 
 
+        
+
 getProgress = (cohort, usersCohort) =>{
   progressRequest.open('GET', requestURLProgress);
   progressRequest.onload = () =>{
@@ -160,21 +163,43 @@ getProgress = (cohort, usersCohort) =>{
       users: usersCohort, 
       progress: usersProgress
       },
-      orderBy: document.getElementById('nameOption').value, //String con criterio de ordenado (ver sortUsers).
-      orderDirection: document.getElementById('asc').value, //String con dirección de ordenado (ver sortUsers).
+      orderBy: '', //String con criterio de ordenado (ver sortUsers).
+      orderDirection: '', //String con dirección de ordenado (ver sortUsers).
       search: '' //String de búsqueda (ver filterUsers)
    };
-    let users, newFilter;
-    document.getElementById('enter').addEventListener('click', buttonEnter = () => {
-      cohortName.innerHTML = document.querySelector('#cohorts').value;
-      totalA.innerHTML = totalUsers;
-      document.getElementById('main').style.display = 'none'; 
-      document.getElementsByClassName('data')[0].style.display = 'initial';
-      users = processCohortData(options);
-      for (const user of users){
-        createCard(user);
-      }
-    });
+    
+    console.log(options.cohortData.users);
+        let users, sort;
+        document.getElementById('enter').addEventListener('click', buttonEnter = () => {
+        cohortName.innerHTML = document.querySelector('#cohorts').value;
+        totalA.innerHTML = totalUsers;
+        document.getElementById('main').style.display = 'none'; 
+        document.getElementsByClassName('data')[0].style.display = 'initial';
+        users = processCohortData(options);
+        options.cohortData.users = users;
+        for (const user of users){
+          createCard(user);
+        }
+       });
+     
+        document.getElementById('orderBy').addEventListener('change', orderByCohort = () => {
+          debugger
+          options.orderBy = document.getElementById('orderBy').value;
+          options.orderDirection = document.getElementById('arregement').value;
+          sort = processCohortData(options);
+          sort = sortUsers(users, options.orderBy, options.orderDirection);
+          console.log(sort);
+        })
+        
+        document.getElementById('arregement').addEventListener('change', orderCohort = () => {
+          debugger
+          options.orderBy = document.getElementById('orderBy').value;
+          options.orderDirection = document.getElementById('arregement').value;
+          sort = processCohortData(options);
+          sort = sortUsers(users, options.orderBy, options.orderDirection);
+         console.log(sort);
+        });
+   
 
     
     document.getElementById('myInput').addEventListener('keyup', filterCohort = () =>{
@@ -244,6 +269,5 @@ cohortsRequest.open('GET', requestURLCohorts);
 cohortsRequest.onload = getCohorts;
 cohortsRequest.onerror = handleError;
 cohortsRequest.send();
-
 
 

@@ -168,11 +168,102 @@ usuarios = users.map((user)=> {
 
 
 window.sortUsers = (users, orderBy, orderDirection) => {
- /* if (orderBy == 'Nombre' && orderDirection == 'Asc') {
-    users.sort();
+  debugger
+  let dataSort;
+  if (orderBy == 'Nombre') {
+   dataSort = users.sort((objt1, objt2) => {
+    if (objt1.name.toUpperCase() > objt2.name.toUpperCase()) {
+      return 1
+  } else if (objt1.name.toUpperCase() < objt2.name.toUpperCase()) {
+      return -1
   }
-*/
-  
+      return 0
+  });
+    if (orderDirection == 'Asc'){
+      return dataSort;
+    } else if (orderDirection == 'Desc') {
+      return dataSort.reverse();
+    }
+  };
+  if (orderBy == 'Completitud Total') {
+    dataSort = users.sort((objt1, objt2) => {
+     if (objt1.stats.percent < objt2.stats.percent) {
+       return 1
+   } else if (objt1.stats.percent > objt2.stats.percent) {
+       return -1
+   }
+       return 0
+   });
+     if (orderDirection == 'Asc'){
+       return dataSort;
+     } else if (orderDirection == 'Desc') {
+       return dataSort.reverse();
+     }
+   };
+   if (orderBy == 'Ejercicios Completados') {
+    dataSort = users.sort((objt1, objt2) => {
+     if (objt1.stats.exercises.completed < objt2.stats.exercises.completed) {
+       return 1
+   } else if (objt1.stats.exercises.completed > objt2.stats.exercises.completed) {
+       return -1
+   }
+       return 0
+   });
+     if (orderDirection == 'Asc'){
+       return dataSort;
+     } else if (orderDirection == 'Desc') {
+       return dataSort.reverse();
+     }
+     
+   };
+   if (orderBy == 'Quizzes Completados') {
+    dataSort = users.sort((objt1, objt2) => {
+     if (objt1.stats.quizzes.completed < objt2.stats.quizzes.completed) {
+       return 1
+   } else if (objt1.stats.quizzes.completed > objt2.stats.quizzes.completed) {
+       return -1
+   }
+       return 0
+   });
+     if (orderDirection == 'Asc'){
+       return dataSort;
+     } else if (orderDirection == 'Desc') {
+       return dataSort.reverse();
+     }
+     
+   };
+   if (orderBy == 'Puntuación de Quizzes') {
+    dataSort = users.sort((objt1, objt2) => {
+     if (objt1.stats.quizzes.scoreSum < objt2.stats.quizzes.scoreSum) {
+       return 1
+   } else if (objt1.stats.quizzes.scoreSum > objt2.stats.quizzes.scoreSum) {
+       return -1
+   }
+       return 0
+   });
+     if (orderDirection == 'Asc'){
+       return dataSort;
+     } else if (orderDirection == 'Desc') {
+       return dataSort.reverse();
+     }
+   };
+   if (orderBy == 'Lecturas Completadas') {
+    dataSort = users.sort((objt1, objt2) => {
+     if (objt1.stats.reads.completed < objt2.stats.reads.completed) {
+       return 1
+   } else if (objt1.stats.reads.completed > objt2.stats.reads.completed) {
+       return -1
+   }
+       return 0
+   });
+     if (orderDirection == 'Asc'){
+       return dataSort;
+     } else if (orderDirection == 'Desc') {
+       return dataSort.reverse();
+     }
+     
+   };
+
 };
 window.filterUsers = (users, search) => {
   let  userFilter = [];
@@ -185,22 +276,13 @@ window.filterUsers = (users, search) => {
 };
 
 window.processCohortData = (options)  => {
-  let users;
-    users = computeUsersStats (options.cohortData.users, options.cohortData.progress, options.cohort.coursesIndex);
-  
-   users = sortUsers (users, options.orderBy, options.orderDirection);
+
+   let users;
+   users = computeUsersStats (options.cohortData.users, options.cohortData.progress, options.cohort.coursesIndex);
+   //users = sortUsers (users, options.orderBy, options.orderDirection);
    if (options.search !== '') {
-    users = filterUsers (users, options.search);
-    }
-    
+   users = filterUsers (users, options.search);
+    };
+
    return users;
-  }
-
-
-
-
-
-
-
-
-  
+  } 
