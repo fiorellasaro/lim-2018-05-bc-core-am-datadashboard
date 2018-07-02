@@ -17,9 +17,6 @@
   display: table;
 }
 
-.invisible {
-  display: none;
-}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -31,69 +28,17 @@ body {
   box-sizing: border-box;
 }
 
+/*-------------------------------------------------------------------------------------------------*/
+
 .menu {
   float: left;
   text-align: center;
   border-right: 0.035em solid #bebebe; 
 }
-.main {
-  position: relative;
-  float: left;
-  padding: 15px;
-}
-
-.formStyle {
-  margin-top: 3%;
-  margin-left: 20%;
-  padding: 1%;
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  height: 20em;
-  border-radius: 1.5em;
-}
-
-.options {
-  display: inline-block;
-  padding-left: 4%;
-  padding-right: 4%;
-  text-align: center;
-}
-
-.options label{
-  display: block;
-}
-
-/*.formStyle input {
-  font-size: 1.2em;
-  margin: 10%;
-  background-color: #ffe521;
-  padding: 0.75em;
-  border: 0;
-  border-radius: 0.5em;
-} Queda pendiente para cuando el botón de ingresar sea input*/ 
-
-#enter {
-  font-size: 1.2em;
-  margin: 10%;
-  background-color: #ffe521;
-  padding: 0.75em;
-  border: 0;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-
-select {
-  margin-top: 2em;
-}
 
 img.logo {
   margin-left: -0.5em;
   width: 110%;
-}
-
-img.logoHome {
-  width: 50%;
 }
 
 img.iconUser {
@@ -102,11 +47,31 @@ img.iconUser {
   margin-bottom: 8%;
 }
 
-p.tittle {
-  font-size: 2em;
-  text-align: center;
-  font-family: 'Bitter', serif;
-  margin-bottom: 1em;
+.burguerMenu {
+  display: none;
+  text-align: left;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    border: none;
+    width: 100%;  
+}
+
+.burguerMenu ul {
+  margin: 0;
+  padding:0; 
+}
+
+.burguerMenu li{
+  padding: 0.5%;
+  border-bottom: 0.035em solid #bebebe;
+}
+
+.burguerMenu ul {
+  list-style: none;
 }
 
 .buttonMenu  button{
@@ -164,6 +129,53 @@ i {
   font-size: 1em;
 }
 
+/*-------------------------------------------------------------------------------------------------*/
+.main {
+position: relative;
+float: left;
+padding: 15px;
+}
+
+.formStyle {
+  margin-top: 3%;
+  margin-left: 20%;
+  padding: 1%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  height: 20em;
+  border-radius: 1.5em;
+}
+
+.options {
+  display: inline-block;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: center;
+}
+
+.options label{
+  display: block;
+}
+
+#enter {
+  font-size: 1.2em;
+  margin: 10%;
+  background-color: #ffe521;
+  padding: 0.75em;
+  border: 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+select {
+  margin-top: 2em;
+}
+
+img.logoHome {
+  width: 50%;
+}
+
 img.deco {
   position: absolute;
   width: 30%;
@@ -172,6 +184,14 @@ img.deco {
   top: 11%;
   z-index: -1;
 }
+
+p.tittle {
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Bitter', serif;
+  margin-bottom: 1em;
+}
+/*-------------------------------------------------------------------------------------------------*/
 
 .data{
   display: none;
@@ -194,6 +214,25 @@ img.deco {
 .order {
   margin-left: 5%;
   margin-bottom: 5%;
+}
+
+.order i {
+  cursor: pointer;
+  color: #000000;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #ffe521;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border: 0;
+  border-radius: 0.5em;
+}
+
+.order select {
+  margin-right: 1em;
+}
+
+.inputSearch {
+  float: right;
 }
 
 .student {
@@ -241,21 +280,296 @@ td {
   background-color: none;
 }
 
-.order i {
-  cursor: pointer;
-  color: #000000;
-  font-size: 1em;
-  font-weight: bold;
-  background-color: #ffe521;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border: 0;
-  border-radius: 0.5em;
-}
+/*-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
 
-.order select {
-  margin-right: 1em;
-}
+@media
+	  only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px)  {
 
-.inputSearch {
-  float: right;
-}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 100%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 100%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+      
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+      
+  body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 100%;
+    }
+      
+  * {
+    box-sizing: border-box;
+    }
+      
+/*-------------------------------------------------------------------------------------------------*/
+
+  .menu {
+    display: block;
+    float: left;
+    text-align: center;
+    border: none;
+    }
+
+  .userInfo {
+    background: url(img/menu.png) no-repeat 98% center;
+    background-color: #fafafa;
+    padding: 0%;
+    border-bottom: 0.035em solid #bebebe;
+    height: 100%;
+    }
+
+  img.logo {
+    width: 30%;
+    }
+
+    .burguerMenu .show {
+      display: none;
+    }
+      
+  img.iconUser {
+    display: none;
+    width: 45%;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    }
+      
+  .buttonMenu{
+    display: none;
+    margin-bottom: 0%;
+      }
+      
+  .buttonMenu2 {
+    display: none;
+    border-top: none;
+      }
+
+      
+  .userName {
+    display: none;
+    margin-top: -1em;
+    font-size: 1em;
+      }      
+
+/*-------------------------------------------------------------------------------------------------*/
+    .main {
+      position: relative;
+      float: left;
+      padding: 15px;
+      }
+
+    .formStyle {
+      margin-top: 3%;
+      margin-left: 20%;
+      padding: 1%;
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      height: 20em;
+      border-radius: 1.5em;
+      }
+      
+    .options {
+      display: inline-block;
+      padding-left: 4%;
+      padding-right: 4%;
+      text-align: center;
+      }
+      
+    .options label{
+      display: block;
+      }
+      
+    #enter {
+      font-size: 1.2em;
+      margin: 10%;
+      background-color: #ffe521;
+      padding: 0.75em;
+      border: 0;
+      border-radius: 0.5em;
+      cursor: pointer;
+      }
+      
+    select {
+      margin-top: 2em;
+      }
+
+    img.logoHome {
+      width: 50%;
+      }
+
+    img.deco {
+      position: absolute;
+      width: 30%;
+      height: auto;
+      right: 0%;
+      top: 11%;
+      z-index: -1;
+      }
+
+    p.tittle {
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Bitter', serif;
+      margin-bottom: 1em;
+      }
+/*-------------------------------------------------------------------------------------------------*/
+
+    .data{
+      display: none;
+      float:left;
+      }
+      
+    #info {
+      border: none;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 0%;
+      margin-right: 0%;
+      display: block;
+      }
+
+    #infoA {
+      font-size: 1.5em;
+      font-weight: bold;
+      }
+      
+    .order {
+      margin-left: 5%;
+      margin-bottom: 5%;
+      }
+      
+    .order i {
+      cursor: pointer;
+      color: #000000;
+      font-size: 1em;
+      font-weight: bold;
+      background-color: #ffe521;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      border: 0;
+      border-radius: 0.5em;
+      }
+      
+    .order select {
+      margin-right: 1em;
+      }
+      
+    .inputSearch {
+      float: right;
+      }
+      /*------------------------------ TABLA -----------------------------------*/
+      
+    .student {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-left: 4%;
+      margin-right: 4%; 
+      margin-bottom: 3%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      padding-right: 0%;
+      }
+      
+    table {
+      border-collapse: collapse;
+      float: left;
+      font-size: 0.93em;
+      width: 90%;
+      }
+      
+    tr {
+      text-align: center;
+      }
+      
+    tr:hover {
+      background-color: #dbdbdb;
+      }
+      
+    th {
+      background-color: #ffe521;
+      font-size: 1em;
+      padding: 1%;
+      }
+      
+    td {
+      padding-right: 1%;
+      padding-left: 1%;
+      width: 90%;
+      padding: 1%;
+      }
+      
+    .student button {
+      font-size: 1em;
+      border: 0;
+      cursor: pointer;
+      background-color: none;
+      }
+
+		/* Force table to not be like tables anymore */
+		table, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		th {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+		td:nth-of-type(1):before { content: "Nombre"; }
+		td:nth-of-type(2):before { content: "Completitud Total"; }
+		td:nth-of-type(3):before { content: "Ejercicios Completados"; }
+		td:nth-of-type(4):before { content: "Quizzes Completados"; }
+		td:nth-of-type(5):before { content: "Puntuación de Quizzes"; }
+		td:nth-of-type(6):before { content: "Lecturas Completadas"; }
+  }
+  

@@ -10,8 +10,6 @@ window.computeUsersStats = (users, progress, courses) => {
 
 let keyOnly = Object.keys(onlyProgress);
 
-
-
 let usuarios = [];
 usuarios = users.map((user)=> {
 
@@ -157,7 +155,6 @@ usuarios = users.map((user)=> {
         }, 
       } 
     }
-
   return usersWithStats;
   });
 
@@ -283,7 +280,8 @@ window.processCohortData = (options)  => {
   let users, sort; 
     users = computeUsersStats (options.cohortData.users, options.cohortData.progress, options.cohort.coursesIndex);
     users = sortUsers (users, options.orderBy, options.orderDirection);
-     users = filterUsers (users, options.search);
+    users = filterUsers (users, options.search);
   
    return users;
+   
   } 
