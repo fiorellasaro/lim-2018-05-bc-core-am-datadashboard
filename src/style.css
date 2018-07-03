@@ -289,50 +289,21 @@ td {
     and (max-width: 760px), (min-device-width: 768px) 
     and (max-device-width: 1024px)  {
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
+
 .col-3 {width: 100%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
 .col-9 {width: 100%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
       
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-    }
-      
-  body {
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    font-size: 100%;
-    }
-      
-  * {
-    box-sizing: border-box;
-    }
       
 /*-------------------------------------------------------------------------------------------------*/
 
   .menu {
     display: block;
-    float: left;
-    text-align: center;
     border: none;
     }
 
   .userInfo {
     background: url(img/menu.png) no-repeat 98% center;
-    background-color: #fafafa;
     padding: 0%;
-    border-bottom: 0.035em solid #bebebe;
-    height: 100%;
     }
 
   img.logo {
@@ -342,13 +313,12 @@ td {
     .burguerMenu .show {
       display: none;
     }
-      
+
+          
   img.iconUser {
     display: none;
-    width: 45%;
-    margin-top: 10%;
-    margin-bottom: 8%;
     }
+
       
   .buttonMenu{
     display: none;
@@ -360,168 +330,35 @@ td {
     border-top: none;
       }
 
-      
   .userName {
     display: none;
-    margin-top: -1em;
-    font-size: 1em;
-      }      
-
+      }  
+      
 /*-------------------------------------------------------------------------------------------------*/
-    .main {
-      position: relative;
-      float: left;
-      padding: 15px;
-      }
-
-    .formStyle {
-      margin-top: 3%;
-      margin-left: 20%;
-      padding: 1%;
-      background-color: #000000;
-      color: #ffffff;
-      text-align: center;
-      height: 20em;
-      border-radius: 1.5em;
-      }
-      
-    .options {
-      display: inline-block;
-      padding-left: 4%;
-      padding-right: 4%;
-      text-align: center;
-      }
-      
-    .options label{
-      display: block;
-      }
-      
-    #enter {
-      font-size: 1.2em;
-      margin: 10%;
-      background-color: #ffe521;
-      padding: 0.75em;
-      border: 0;
-      border-radius: 0.5em;
-      cursor: pointer;
-      }
-      
-    select {
-      margin-top: 2em;
-      }
-
-    img.logoHome {
-      width: 50%;
-      }
-
-    img.deco {
-      position: absolute;
-      width: 30%;
-      height: auto;
-      right: 0%;
-      top: 11%;
-      z-index: -1;
-      }
-
-    p.tittle {
-      font-size: 2em;
-      text-align: center;
-      font-family: 'Bitter', serif;
-      margin-bottom: 1em;
-      }
-/*-------------------------------------------------------------------------------------------------*/
-
-    .data{
-      display: none;
-      float:left;
-      }
       
     #info {
       border: none;
-      margin-top: 2%;
-      margin-bottom: 2%;
       margin-left: 0%;
       margin-right: 0%;
-      display: block;
-      }
-
-    #infoA {
-      font-size: 1.5em;
-      font-weight: bold;
+    
       }
       
-    .order {
-      margin-left: 5%;
-      margin-bottom: 5%;
-      }
-      
-    .order i {
-      cursor: pointer;
-      color: #000000;
-      font-size: 1em;
-      font-weight: bold;
-      background-color: #ffe521;
-      padding: 0.2em 0.5em 0.2em 0.5em;
-      border: 0;
-      border-radius: 0.5em;
-      }
-      
-    .order select {
-      margin-right: 1em;
-      }
-      
-    .inputSearch {
-      float: right;
-      }
       /*------------------------------ TABLA -----------------------------------*/
       
     .student {
       display: block;
-      float: left;
       width: 100%;
-      margin-left: 4%;
       margin-right: 4%; 
-      margin-bottom: 3%;
-      padding-top: 1%;
-      padding-bottom: 1%;
-      padding-right: 0%;
       }
       
     table {
-      border-collapse: collapse;
-      float: left;
-      font-size: 0.93em;
       width: 90%;
-      }
-      
-    tr {
-      text-align: center;
-      }
-      
-    tr:hover {
-      background-color: #dbdbdb;
-      }
-      
-    th {
-      background-color: #ffe521;
-      font-size: 1em;
-      padding: 1%;
       }
       
     td {
-      padding-right: 1%;
-      padding-left: 1%;
       width: 90%;
-      padding: 1%;
       }
-      
-    .student button {
-      font-size: 1em;
-      border: 0;
-      cursor: pointer;
-      background-color: none;
-      }
-
+           
 		/* Force table to not be like tables anymore */
 		table, th, td, tr {
 			display: block;
